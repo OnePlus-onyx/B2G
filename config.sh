@@ -30,8 +30,8 @@ case `uname` in
 	exit -1
 esac
 
-GITREPO=${GITREPO:-"git://github.com/b2gos/manifests"}
-BRANCH=${BRANCH:-master}
+GITREPO=${GITREPO:-"git://github.com/CicadaOS/manifests"}
+BRANCH=${BRANCH:-cicada}
 
 while [ $# -ge 1 ]; do
 	case $1 in
@@ -91,6 +91,11 @@ case "$1" in
 	echo BINSUFFIX=64 >> .tmp-config &&
 	repo_sync $1
 	;;
+"onyx")
+	echo PRODUCT_NAME=lemon_onyx  >> .tmp-config &&
+	echo TARGET_NAME=onyx  >> .tmp-config &&
+	repo_sync $1
+	;;
 *)
 	echo "Usage: $0 [-cdflnq] [-j <jobs>] [--force-sync] (device name)"
 	echo "Flags are passed through to |./repo sync|."
@@ -98,6 +103,8 @@ case "$1" in
 	echo Valid devices to configure are:
 	echo - emulator-10-arm
 	echo - emulator-10-x86_64
+	echo - sargo
+	echo - onyx
 	exit -1
 	;;
 esac
