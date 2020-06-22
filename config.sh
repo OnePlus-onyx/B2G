@@ -31,7 +31,7 @@ case `uname` in
 esac
 
 GITREPO=${GITREPO:-"git://github.com/OnePlus-onyx/manifests"}
-BRANCH=${BRANCH:-cicada}
+BRANCH=${BRANCH:-gonk_android-10.0.0_r11}
 
 while [ $# -ge 1 ]; do
 	case $1 in
@@ -109,7 +109,7 @@ case "$1" in
 	;;
 esac
 
-echo GECKO_OBJDIR=$PWD/objdir-gecko-$TARGET_NAME >> .tmp-config
+echo GECKO_OBJDIR=$PWD/objdir-gecko-\$TARGET_NAME >> .tmp-config
 
 if [ $? -ne 0 ]; then
 	echo Configuration failed
