@@ -31,7 +31,7 @@ case `uname` in
 esac
 
 GITREPO=${GITREPO:-"git://github.com/OnePlus-onyx/manifests"}
-BRANCH=${BRANCH:-tmp}
+BRANCH=${BRANCH:-test}
 
 while [ $# -ge 1 ]; do
 	case $1 in
