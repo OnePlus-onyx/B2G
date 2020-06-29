@@ -92,7 +92,7 @@ case "$1" in
 	repo_sync $1
 	;;
 "onyx")
-	echo PRODUCT_NAME=lemon_onyx  >> .tmp-config &&
+	echo PRODUCT_NAME=b2g_onyx  >> .tmp-config &&
 	echo TARGET_NAME=onyx  >> .tmp-config &&
 	repo_sync $1
 	;;
