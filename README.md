@@ -58,7 +58,7 @@ At boot time, you might need `adb shell setenforce 0` for B2G to boot (flash_sar
 4. Build: `./build.sh`
 7. Boot the Android system, go to settings, enable developer mode and enable OEM Unlock
 8. Reboot into fastboot mode
-9. Flash: `./flash_sargo.sh`
+9. Flash: `./flash_onyx.sh`
 
 If need to output a zip ROM file, you can use `./build.sh dist DIST_DIR=dist_output` instead of `./build.sh` in step 4.
 
