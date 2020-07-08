@@ -56,10 +56,13 @@ At boot time, you might need `adb shell setenforce 0` for B2G to boot (flash_sar
 2. Setup your environment to fetch the custom NDK: `export LOCAL_NDK_BASE_URL='ftp://ftp.kaiostech.com/ndk/android-ndk'`
 3. Install Gecko dependencies: `cd gecko && ./mach bootstrap`, choose option 4 (Android Geckoview).
 4. Build: `./build.sh`
-7. Boot the Android system, go to settings, enable developer mode and enable OEM Unlock
-8. Reboot into fastboot mode
-9. Flash: `./flash_onyx.sh`
-
+5. Boot the Android system, go to settings, enable developer mode and enable OEM Unlock
+6. Reboot into fastboot mode
+7. Flash:
+   - `fastboot erase userdata`
+   - `fastboot flash system $gonk_path/system.img`
+   - `fastboot flash boot $gonk_path/boot.img`
+  
 If need to output a zip ROM file, you can use `./build.sh dist DIST_DIR=dist_output` instead of `./build.sh` in step 4.
 
 # Re-building your own NDK
